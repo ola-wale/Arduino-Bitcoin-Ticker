@@ -21,7 +21,6 @@ try{
 		case '0':
 			$response = $client->get('https://api.kraken.com/0/public/Ticker?pair=XXBTZEUR');
 			$body = $response->getBody();
-			// Implicitly cast the body to a string and echo it
 			$body = json_decode($body);
 			$output['price'] = "€".$body->result->XXBTZEUR->a[0];
 			$output['pair'] = "Kraken BTC/EUR";
@@ -29,7 +28,6 @@ try{
 		case '1':
 			$response = $client->get('https://api.kraken.com/0/public/Ticker?pair=XXBTZUSD');
 			$body = $response->getBody();
-			// Implicitly cast the body to a string and echo it
 			$body = json_decode($body);
 			$output['price'] = "$".$body->result->XXBTZUSD->a[0];
 			$output['pair'] = "Kraken BTC/USD";
@@ -37,7 +35,6 @@ try{
 		case '2':
 			$response = $client->get('https://www.bitstamp.net/api/v2/ticker/btceur/');
 			$body = $response->getBody();
-			// Implicitly cast the body to a string and echo it
 			$body = json_decode($body);
 			$output['price'] = "€".$body->last;
 			$output['pair'] = "Bitstamp BTC/EUR";
@@ -45,7 +42,6 @@ try{
 		case '3':
 			$response = $client->get('https://www.bitstamp.net/api/v2/ticker/btcusd/');
 			$body = $response->getBody();
-			// Implicitly cast the body to a string and echo it
 			$body = json_decode($body);
 			$output['price'] = "$".$body->last;
 			$output['pair'] = "Bitstamp BTC/USD";
@@ -53,7 +49,6 @@ try{
 		case '4':
 			$response = $client->get('https://bitbay.net/API/Public/BTCPLN/ticker.json');
 			$body = $response->getBody();
-			// Implicitly cast the body to a string and echo it
 			$body = json_decode($body);
 			$output['price'] = "zł".$body->last;
 			$output['pair'] = "Bitbay BTC/PLN";
