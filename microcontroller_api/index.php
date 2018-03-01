@@ -61,5 +61,5 @@ catch(Exception $e){
 
 
 echo "~";
-echo json_encode($output,JSON_UNESCAPED_UNICODE );
+echo json_encode($output,JSON_UNESCAPED_UNICODE);
 die();
